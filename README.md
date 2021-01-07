@@ -1,10 +1,10 @@
 <br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+<p align="left">
+  <a href="https://github.com/Lunar-Mods/Crewcam/">
+    <img src="crewcam.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="left">Crewcam</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
