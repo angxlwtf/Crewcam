@@ -5,4 +5,5 @@
   </a>
         <h3 align="Center">Crewcam</h3>
         <h3 align="Center">Among Us mod that allows you to change your camera. (Change zoom, focus on a player, toggle shadows)</h3> 
+        <h3 align="Center">Keybinds</h3>
 </p>
