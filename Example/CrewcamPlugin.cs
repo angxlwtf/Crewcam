@@ -19,7 +19,7 @@ namespace Crewcam
         public const string Id = "crewcam";
         public static int playerR = 0;
         public static float zoom = 3f;
-        public static bool shadows = true;
+        public static bool shadows = false;
 
         public static int count = 0;
 
@@ -34,18 +34,8 @@ namespace Crewcam
         [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.FixedUpdate))]
         public static class PlayerControlFixedUpdatePatch
         {
-
             public static void Postfix()
             {
-                if (shadows)
-                {
-                    Camera.main.transform.SetPositionAndRotation(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 100), Camera.main.transform.rotation);
-                }
-                else
-                {
-                    Camera.main.transform.SetParent(null);
-                }
-
                 Camera.main.orthographicSize = zoom;
                 foreach (PlayerControl player in PlayerControl.AllPlayerControls)
                 {
@@ -87,19 +77,20 @@ namespace Crewcam
                     playerR = playerR + 1;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F6)) //Zoom out by 1
+                if (Input.GetKeyDown(KeyCode.F6)) //Change zoom
                 {
                     zoom = zoom + 1f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F7)) //Zoom in by 1
+                if (Input.GetKeyDown(KeyCode.F7)) //Change zoom
                 {
                     zoom = zoom - 1f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F8)) //Toggle shadows
+                if (Input.GetKeyDown(KeyCode.F8)) //Change zoom
                 {
                     shadows = !shadows;
+                    HudManager.Instance.ShadowQuad.gameObject.SetActive(shadows);
                 }
             }
         }
