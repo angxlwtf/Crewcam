@@ -87,7 +87,7 @@ namespace Crewcam
                     zoom = zoom - 1f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F8)) //Change zoom
+                if (Input.GetKeyDown(KeyCode.F8)) //Toggle shadows
                 {
                     shadows = !shadows;
                     HudManager.Instance.ShadowQuad.gameObject.SetActive(shadows);
