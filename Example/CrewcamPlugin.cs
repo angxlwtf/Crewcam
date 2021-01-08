@@ -87,17 +87,17 @@ namespace Crewcam
                     playerR = playerR + 1;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F6)) //Change zoom
+                if (Input.GetKeyDown(KeyCode.F6)) //Zoom out by 1
                 {
                     zoom = zoom + 1f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F7)) //Change zoom
+                if (Input.GetKeyDown(KeyCode.F7)) //Zoom in by 1
                 {
                     zoom = zoom - 1f;
                 }
 
-                if (Input.GetKeyDown(KeyCode.F8)) //Change zoom
+                if (Input.GetKeyDown(KeyCode.F8)) //Toggle shadows
                 {
                     shadows = !shadows;
                 }
