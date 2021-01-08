@@ -46,11 +46,12 @@ namespace Crewcam
                         if (players == PlayerControl.LocalPlayer)
                         {
                             Camera.main.transform.SetParent(null);
+                            HudManager.Instance.ShadowQuad.gameObject.SetActive(true);
                         }
                         else
                         {
                             Camera.main.transform.position = players.transform.position;
-                            Camera.main.transform.SetPositionAndRotation(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 100), Camera.main.transform.rotation);
+                            HudManager.Instance.ShadowQuad.gameObject.SetActive(false);
                         }
                         count = 0;
                         return;
