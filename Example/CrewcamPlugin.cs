@@ -1,4 +1,4 @@
-﻿// Coded by Lunar Mods | https://github.com/Lunar-Mods
+﻿// Coded by angxl | https://github.com/angxlwtf
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.IL2CPP;
